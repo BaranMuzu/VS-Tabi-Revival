@@ -1,15 +1,15 @@
 {
 	"animations": [
 		{
+			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": true,
-			"anim": "idle",
 			"fps": 24,
-			"name": "gf owie",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "gf owie"
 		}
 	],
 	"vocals_file": "",
@@ -19,7 +19,7 @@
 		300,
 		100
 	],
-	"healthicon": "gf-genocide",
+	"healthicon": "gf",
 	"flip_x": false,
 	"healthbar_colors": [
 		255,

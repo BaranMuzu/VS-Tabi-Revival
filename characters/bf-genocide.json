@@ -1,122 +1,124 @@
 {
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "gbfidle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-42,
+				19
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "gbfright0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				14,
+				22
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "gbfdown0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-7,
+				75
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "gbfup0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				154,
+				8
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "gbfleft0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-38,
+				23
+			],
+			"loop": false,
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "gbfrightmiss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				14,
+				15
+			],
+			"loop": false,
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "gbfdownmiss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				71
+			],
+			"loop": false,
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "gbfupmiss",
+			"indices": []
+		},
+		{
+			"offsets": [
+				142,
+				9
+			],
+			"loop": false,
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "gbfmissleft",
+			"indices": []
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/bf-genocide",
+	"position": [
+		-20,
+		280
+	],
+	"healthicon": "bf",
+	"flip_x": true,
 	"healthbar_colors": [
 		49,
 		176,
 		209
 	],
-	"position": [
-		-70,
-		200
-	],
-	"no_antialiasing": false,
-	"scale": 0.9,
 	"camera_position": [
 		-200,
 		100
 	],
-	"image": "characters/bf-genocide",
 	"sing_duration": 4,
-	"healthicon": "bf-genocide",
-	"flip_x": true,
-	"animations": [
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "gbfidle"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				18,
-				9
-			],
-			"fps": 24,
-			"anim": "singRIGHT",
-			"indices": [],
-			"name": "gbfright0"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-27,
-				22.5
-			],
-			"fps": 24,
-			"anim": "singDOWN",
-			"indices": [],
-			"name": "gbfdown0"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				4.5,
-				76.5
-			],
-			"fps": 24,
-			"anim": "singUP",
-			"indices": [],
-			"name": "gbfup0"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-156.6,
-				8.1
-			],
-			"fps": 24,
-			"anim": "singLEFT",
-			"indices": [],
-			"name": "gbfleft0"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				22.5,
-				13.5
-			],
-			"fps": 24,
-			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "gbfrightmiss"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-36,
-				45
-			],
-			"fps": 24,
-			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "gbfdownmiss"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				81
-			],
-			"fps": 24,
-			"anim": "singUPmiss",
-			"indices": [],
-			"name": "gbfupmiss"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-148.5,
-				4.5
-			],
-			"fps": 24,
-			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "gbfmissleft"
-		}
-	]
+	"scale": 0.8,
+	"_editor_isPlayer": true
 }
