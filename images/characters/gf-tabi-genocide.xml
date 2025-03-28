@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gfinjured.png">
+	<!-- Created with Adobe Animate version 20.5.1.31044 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="gf owie0000" x="10" y="10" width="236" height="349"/>
+	<SubTexture name="gf owie0001" x="10" y="10" width="236" height="349"/>
+	<SubTexture name="gf owie0002" x="10" y="10" width="236" height="349"/>
+	<SubTexture name="gf owie0003" x="10" y="10" width="236" height="349"/>
+	<SubTexture name="gf owie0004" x="296" y="10" width="236" height="348" frameX="0" frameY="-1" frameWidth="236" frameHeight="349"/>
+	<SubTexture name="gf owie0005" x="296" y="10" width="236" height="348" frameX="0" frameY="-1" frameWidth="236" frameHeight="349"/>
+	<SubTexture name="gf owie0006" x="296" y="10" width="236" height="348" frameX="0" frameY="-1" frameWidth="236" frameHeight="349"/>
+	<SubTexture name="gf owie0007" x="296" y="10" width="236" height="348" frameX="0" frameY="-1" frameWidth="236" frameHeight="349"/>
+	<SubTexture name="gf owie0008" x="582" y="10" width="236" height="348" frameX="0" frameY="-1" frameWidth="236" frameHeight="349"/>
+	<SubTexture name="gf owie0009" x="582" y="10" width="236" height="348" frameX="0" frameY="-1" frameWidth="236" frameHeight="349"/>
+	<SubTexture name="gf owie0010" x="582" y="10" width="236" height="348" frameX="0" frameY="-1" frameWidth="236" frameHeight="349"/>
+	<SubTexture name="gf owie0011" x="582" y="10" width="236" height="348" frameX="0" frameY="-1" frameWidth="236" frameHeight="349"/>
+</TextureAtlas>

@@ -1,0 +1,122 @@
+{
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"position": [
+		-70,
+		200
+	],
+	"no_antialiasing": false,
+	"scale": 0.9,
+	"camera_position": [
+		-200,
+		100
+	],
+	"image": "characters/bf-genocide",
+	"sing_duration": 4,
+	"healthicon": "bf-genocide",
+	"flip_x": true,
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "gbfidle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				18,
+				9
+			],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "gbfright0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-27,
+				22.5
+			],
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "gbfdown0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				4.5,
+				76.5
+			],
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "gbfup0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-156.6,
+				8.1
+			],
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "gbfleft0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				22.5,
+				13.5
+			],
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "gbfrightmiss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-36,
+				45
+			],
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "gbfdownmiss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				81
+			],
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "gbfupmiss"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-148.5,
+				4.5
+			],
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "gbfmissleft"
+		}
+	]
+}

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="front flame left.png">
+	<!-- Created with Adobe Animate version 22.0.8.217 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="fire instance 10000" x="7" y="1688" width="756" height="811" frameX="-62" frameY="-98" frameWidth="874" frameHeight="936"/>
+	<SubTexture name="fire instance 10001" x="7" y="1688" width="756" height="811" frameX="-62" frameY="-98" frameWidth="874" frameHeight="936"/>
+	<SubTexture name="fire instance 10002" x="7" y="867" width="812" height="814" frameX="-39" frameY="-109" frameWidth="874" frameHeight="936"/>
+	<SubTexture name="fire instance 10003" x="7" y="7" width="852" height="853" frameX="0" frameY="-77" frameWidth="874" frameHeight="936"/>
+	<SubTexture name="fire instance 10004" x="7" y="7" width="852" height="853" frameX="0" frameY="-77" frameWidth="874" frameHeight="936"/>
+	<SubTexture name="fire instance 10005" x="826" y="937" width="707" height="890" frameX="-167" frameY="-46" frameWidth="874" frameHeight="936"/>
+	<SubTexture name="fire instance 10006" x="826" y="937" width="707" height="890" frameX="-167" frameY="-46" frameWidth="874" frameHeight="936"/>
+	<SubTexture name="fire instance 10007" x="770" y="1834" width="671" height="905" frameX="-159" frameY="-18" frameWidth="874" frameHeight="936"/>
+	<SubTexture name="fire instance 10008" x="866" y="7" width="728" height="923" frameX="-118" frameY="0" frameWidth="874" frameHeight="936"/>
+	<SubTexture name="fire instance 10009" x="866" y="7" width="728" height="923" frameX="-118" frameY="0" frameWidth="874" frameHeight="936"/>
+	<SubTexture name="fire instance 10010" x="7" y="2746" width="760" height="799" frameX="-84" frameY="-121" frameWidth="874" frameHeight="936"/>
+	<SubTexture name="fire instance 10011" x="7" y="2746" width="760" height="799" frameX="-84" frameY="-121" frameWidth="874" frameHeight="936"/>
+	<SubTexture name="fire instance 10012" x="774" y="2746" width="724" height="818" frameX="-95" frameY="-108" frameWidth="874" frameHeight="936"/>
+</TextureAtlas>

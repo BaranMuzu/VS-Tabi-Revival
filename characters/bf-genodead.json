@@ -1,0 +1,56 @@
+{
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"position": [
+		-100,
+		170
+	],
+	"no_antialiasing": false,
+	"scale": 1,
+	"camera_position": [
+		300,
+		100
+	],
+	"image": "characters/bf-genodead",
+	"sing_duration": 4,
+	"healthicon": "bf-genodead",
+	"flip_x": true,
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "gbfdeathstart"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				250,
+				-130
+			],
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "gbfdeathloop"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				269,
+				-159
+			],
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "gbfdeathretry"
+		}
+	]
+}

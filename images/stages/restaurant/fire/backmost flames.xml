@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="backmost flames.png">
+	<!-- Created with Adobe Animate version 22.0.8.217 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Symbol 7 instance 10000" x="7" y="7" width="2719" height="880"/>
+	<SubTexture name="Symbol 7 instance 10001" x="7" y="894" width="2719" height="880"/>
+	<SubTexture name="Symbol 7 instance 10002" x="7" y="2656" width="2719" height="853" frameX="0" frameY="-27" frameWidth="2719" frameHeight="880"/>
+	<SubTexture name="Symbol 7 instance 10003" x="2733" y="7" width="2719" height="853" frameX="0" frameY="-27" frameWidth="2719" frameHeight="880"/>
+	<SubTexture name="Symbol 7 instance 10004" x="5459" y="7" width="2719" height="853" frameX="0" frameY="-27" frameWidth="2719" frameHeight="880"/>
+	<SubTexture name="Symbol 7 instance 10005" x="2733" y="867" width="2719" height="853" frameX="0" frameY="-27" frameWidth="2719" frameHeight="880"/>
+	<SubTexture name="Symbol 7 instance 10006" x="5459" y="867" width="2719" height="853" frameX="0" frameY="-27" frameWidth="2719" frameHeight="880"/>
+	<SubTexture name="Symbol 7 instance 10007" x="2733" y="1727" width="2719" height="853" frameX="0" frameY="-27" frameWidth="2719" frameHeight="880"/>
+	<SubTexture name="Symbol 7 instance 10008" x="5459" y="1727" width="2719" height="853" frameX="0" frameY="-27" frameWidth="2719" frameHeight="880"/>
+	<SubTexture name="Symbol 7 instance 10009" x="2733" y="2587" width="2719" height="853" frameX="0" frameY="-27" frameWidth="2719" frameHeight="880"/>
+	<SubTexture name="Symbol 7 instance 10010" x="5459" y="2587" width="2719" height="853" frameX="0" frameY="-27" frameWidth="2719" frameHeight="880"/>
+	<SubTexture name="Symbol 7 instance 10011" x="2733" y="3447" width="2719" height="853" frameX="0" frameY="-27" frameWidth="2719" frameHeight="880"/>
+	<SubTexture name="Symbol 7 instance 10012" x="7" y="1781" width="2719" height="868" frameX="0" frameY="-12" frameWidth="2719" frameHeight="880"/>
+	<SubTexture name="Symbol 7 instance 10013" x="7" y="7" width="2719" height="880"/>
+</TextureAtlas>
