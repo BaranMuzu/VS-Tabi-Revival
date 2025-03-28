@@ -1,37 +1,37 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"anim": "firstDeath",
 			"fps": 24,
-			"name": "gbfdeathstart",
-			"indices": []
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "gbfdeathstart"
 		},
 		{
+			"loop": true,
 			"offsets": [
 				-251,
 				-140
 			],
-			"loop": true,
-			"anim": "deathLoop",
 			"fps": 24,
-			"name": "gbfdeathloop",
-			"indices": []
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "gbfdeathloop"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-245,
 				-140
 			],
-			"loop": false,
-			"anim": "deathConfirm",
 			"fps": 24,
-			"name": "gbfdeathretry",
-			"indices": []
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "gbfdeathretry"
 		}
 	],
 	"vocals_file": "",
@@ -49,8 +49,8 @@
 		255
 	],
 	"camera_position": [
-		300,
-		100
+		-140,
+		40
 	],
 	"sing_duration": 4,
 	"scale": 1,

@@ -1,103 +1,103 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"anim": "idle",
 			"fps": 24,
-			"name": "gbfidle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "gbfidle"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-42,
 				19
 			],
-			"loop": false,
-			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "gbfright0",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "gbfright0"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				14,
 				22
 			],
-			"loop": false,
-			"anim": "singDOWN",
 			"fps": 24,
-			"name": "gbfdown0",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "gbfdown0"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-7,
 				75
 			],
-			"loop": false,
-			"anim": "singUP",
 			"fps": 24,
-			"name": "gbfup0",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "gbfup0"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				154,
 				8
 			],
-			"loop": false,
-			"anim": "singLEFT",
 			"fps": 24,
-			"name": "gbfleft0",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "gbfleft0"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-38,
 				23
 			],
-			"loop": false,
-			"anim": "singRIGHTmiss",
 			"fps": 24,
-			"name": "gbfrightmiss",
-			"indices": []
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "gbfrightmiss"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				14,
 				15
 			],
-			"loop": false,
-			"anim": "singDOWNmiss",
 			"fps": 24,
-			"name": "gbfdownmiss",
-			"indices": []
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "gbfdownmiss"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				71
 			],
-			"loop": false,
-			"anim": "singUPmiss",
 			"fps": 24,
-			"name": "gbfupmiss",
-			"indices": []
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "gbfupmiss"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				142,
 				9
 			],
-			"loop": false,
-			"anim": "singLEFTmiss",
 			"fps": 24,
-			"name": "gbfmissleft",
-			"indices": []
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "gbfmissleft"
 		}
 	],
 	"vocals_file": "",
@@ -115,8 +115,8 @@
 		209
 	],
 	"camera_position": [
-		-200,
-		100
+		160,
+		20
 	],
 	"sing_duration": 4,
 	"scale": 0.8,
