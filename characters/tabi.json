@@ -1,23 +1,4 @@
 {
-	"healthbar_colors": [
-		243,
-		196,
-		116
-	],
-	"position": [
-		100,
-		120
-	],
-	"no_antialiasing": false,
-	"scale": 1.25,
-	"camera_position": [
-		0,
-		0
-	],
-	"image": "characters/tabi",
-	"sing_duration": 6.1,
-	"healthicon": "tabi",
-	"flip_x": false,
 	"animations": [
 		{
 			"loop": false,
@@ -44,8 +25,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				93.75,
-				-106.25
+				93,
+				-106
 			],
 			"fps": 24,
 			"anim": "singDOWN",
@@ -55,7 +36,7 @@
 		{
 			"loop": false,
 			"offsets": [
-				103.75,
+				103,
 				85
 			],
 			"fps": 24,
@@ -66,8 +47,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-6.25,
-				-12.5
+				-6,
+				-12
 			],
 			"fps": 24,
 			"anim": "singRIGHT",
@@ -77,46 +58,103 @@
 		{
 			"loop": false,
 			"offsets": [
-				126.25,
-				-7.5
-			],
-			"fps": 24,
-			"anim": "pre-snap",
-			"indices": [],
-			"name": "tabisnapup instance 1"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				180,
-				158.75
-			],
-			"fps": 24,
-			"anim": "snap",
-			"indices": [],
-			"name": "tabisnapdown instance 10"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				177.5,
-				180
-			],
-			"fps": 24,
-			"anim": "wake-snap",
-			"indices": [],
-			"name": "tabisnapwake"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				1.25,
-				31.25
+				1,
+				31
 			],
 			"fps": 24,
 			"anim": "glare",
 			"indices": [],
 			"name": "tabimidsong"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				177,
+				180
+			],
+			"anim": "wake-snap",
+			"fps": 24,
+			"name": "tabisnapwake",
+			"indices": []
+		},
+		{
+			"offsets": [
+				180,
+				158
+			],
+			"indices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				13,
+				13,
+				13,
+				13
+			],
+			"fps": 24,
+			"anim": "snap",
+			"loop": false,
+			"name": "tabisnapdown instance 10"
+		},
+		{
+			"offsets": [
+				126,
+				-7
+			],
+			"indices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				13,
+				13,
+				13,
+				13
+			],
+			"fps": 24,
+			"anim": "pre-snap",
+			"loop": false,
+			"name": "tabisnapup instance 1"
 		}
-	]
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/tabi",
+	"position": [
+		100,
+		120
+	],
+	"healthicon": "tabi",
+	"flip_x": false,
+	"healthbar_colors": [
+		243,
+		196,
+		116
+	],
+	"camera_position": [
+		-70,
+		-80
+	],
+	"sing_duration": 4.5,
+	"scale": 1.25,
+	"_editor_isPlayer": false
 }

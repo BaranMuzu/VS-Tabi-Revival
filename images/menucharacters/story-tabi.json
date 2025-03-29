@@ -1,0 +1,11 @@
+{
+	"confirm_anim": "idle",
+	"idle_anim": "idle",
+	"position": [
+		810,
+		90
+	],
+	"scale": 1,
+	"image": "story-tabi",
+	"flipX": false
+}

@@ -1,0 +1,50 @@
+{
+	"songs": [
+		[
+			"my-battle",
+			"tabi",
+			[
+				243,
+				196,
+				116
+			]
+		],
+		[
+			"last-chance",
+			"tabi",
+			[
+				243,
+				196,
+				116
+			]
+		],
+		[
+			"genocide",
+			"tabi-genocide",
+			[
+				203,
+				156,
+				76
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"difficulties": "Hard",
+	"weekCharacters": [
+		"",
+		"",
+		"story-tabi"
+	],
+	"storyName": "",
+	"weekName": "tabi",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}
