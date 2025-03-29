@@ -1,0 +1,24 @@
+empty: (phone rings)): ringtone
+BFPHONE: Baap?: dialogue/my-battle/2
+GFPHONE: Haiii babee!: dialogue/my-battle/GF 1
+GFPHONE: Hey. There's this new fancy restaurant that I wanna go to, and I want YOU to come with me.: dialogue/my-battle/GF 2
+BFPHONE: Uhhh....: dialogue/my-battle/4
+GFPHONE: Oh yeah! Don't worry about it. My family's rich as hell, remember? It's gonna be on me.: dialogue/my-battle/GF 3
+BFPHONE: Ay!: dialogue/my-battle/6
+GFPHONE: Hehehe! Meet me at my place. I'll take you there.: dialogue/my-battle/GF 4
+GF: Aw Shit. Babe, I gotta tinkle. Can you wait here for a bit?
+BF: *?*
+GF: AWWWW!!! You're gonna take me there? You're so sweet.
+BF: *touches GF's shoulder*
+GF: Yea? What's up?
+BF: *Points at Tabi*
+Tabi: I see you already found someone else.
+GF: Yea um, I'm sorry. Who are you?
+Tabi: Playing dumb won't get you anywhere Dearest...
+Tabi: ..And as for you...
+Tabi: GET THE HELL OUT OF HERE!
+Tabi: Me..
+Tabi: ..and YOUR GIRL...
+Tabi: ..need to have a little talk.
+BF: *Throws a mic at him*
+Tabi: If that's what it'll take for you to leave... So be it.
