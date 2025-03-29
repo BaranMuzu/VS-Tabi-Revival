@@ -114,7 +114,7 @@ end
 
 function onCustomSubstateUpdatePost(name, elapsed) -- ON UPDATE POST BUT WHEN PAUSES
     if name == 'TabiPause' then
-        if keyboardJustPressed('ENTER') then
+        if keyJustPressed('accept') then
             if curSelect == 1 then
                 pause = false
                 closeCustomSubstate();
@@ -147,17 +147,24 @@ function onCustomSubstateUpdatePost(name, elapsed) -- ON UPDATE POST BUT WHEN PA
                 if curSelect < 4 then
                     playSound("scrollMenu")
                     curSelect = curSelect + 1
-                    buttonCheck()
+                else
+                    playSound("scrollMenu")
+                    curSelect = 1
                 end
+                buttonCheck()
             end
         end
+        
         if keyJustPressed("up") then
             if pause then
                 if curSelect > 1 then
                     playSound("scrollMenu")
                     curSelect = curSelect - 1
-                    buttonCheck()
+                else
+                    playSound("scrollMenu")
+                    curSelect = 4
                 end
+                buttonCheck()
             end
         end
     end
