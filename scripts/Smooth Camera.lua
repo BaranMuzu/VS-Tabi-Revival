@@ -1,7 +1,6 @@
 local camBetterFollowLerp = 0.1;
 
 local camCharacter = 'dad';
-local charCamPosition = {0, 0};
 local overrideCamPos = false;
 
 luaDebugMode = true;
@@ -33,11 +32,11 @@ end
 function onMoveCamera(character)
 	if not overrideCamPos then
 		camCharacter = character;
-		updateCameraChar();
 	end
 end
 
-function updateCameraChar()
+function getCharPos()
+	local charCamPosition = {0, 0};
 	if camCharacter == 'dad' then
 		charCamPosition = {getMidpointX('dad') + 150, getMidpointY('dad') - 100};
 		charCamPosition[1] = charCamPosition[1] + getProperty('dad.cameraPosition[0]') + getProperty('opponentCameraOffset[0]');
@@ -51,18 +50,24 @@ function updateCameraChar()
 		charCamPosition[1] = charCamPosition[1] + getProperty('gf.cameraPosition[0]') + getProperty('girlfriendCameraOffset[0]');
 		charCamPosition[2] = charCamPosition[2] + getProperty('gf.cameraPosition[1]') + getProperty('girlfriendCameraOffset[1]');
 	end
+
+	return charCamPosition;
 end
 
 function onUpdatePost(elapsed)
-	local realCameraPos = {charCamPosition[1], charCamPosition[2]};
+	local realCameraPos = getCharPos();
 
 	local displacement = getDisplacement(camCharacter);
 	realCameraPos[1] = realCameraPos[1] + displacement[1];
 	realCameraPos[2] = realCameraPos[2] + displacement[2];
 
-	setProperty('camBetterFollow.x', callMethodFromClass('flixel.math.FlxMath', 'lerp', {getProperty('camBetterFollow.x'), getProperty('camFollow.x'), camBetterFollowLerp}));
-	setProperty('camBetterFollow.y', callMethodFromClass('flixel.math.FlxMath', 'lerp', {getProperty('camBetterFollow.y'), getProperty('camFollow.y'), camBetterFollowLerp}));
+	setProperty('camBetterFollow.x', lerp(getProperty('camBetterFollow.x'), getProperty('camFollow.x'), camBetterFollowLerp));
+	setProperty('camBetterFollow.y', lerp(getProperty('camBetterFollow.y'), getProperty('camFollow.y'), camBetterFollowLerp));
 
 	setProperty('camFollow.x', realCameraPos[1]);
 	setProperty('camFollow.y', realCameraPos[2]);
+end
+
+function lerp(a, b, ratio)
+	return a + ratio * (b - a);
 end

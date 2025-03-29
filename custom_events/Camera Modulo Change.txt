@@ -1,0 +1,9 @@
+the v1 how the beat
+orgi. Modulo Interval (Beats)
+the v2 how the beat zoom (for advance moder)
+orgi. Bump Strengh
+
+this is a codename event soo for making codename to psych
+to set it back use 0 in v1
+recomend v2 is 0.85
+set it to noting for default on v2
