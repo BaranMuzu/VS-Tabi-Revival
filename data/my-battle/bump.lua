@@ -2,6 +2,7 @@ local bumpThing = false;
 luaDebugMode = true;
 
 function onCreate()
+	triggerEvent("Set GF Speed", 2, nil)
 	initLuaShader('perspective');
 
 	makeLuaSprite('perspectiveShader');
@@ -27,7 +28,7 @@ function onStepHit()
 	elseif curStep == 128 then
 		setProperty('defaultCamZoom', getProperty('defaultCamZoom') - 0.2);
 		setProperty('boyfriendCameraOffset[1]', getProperty('boyfriendCameraOffset[1]') - 100)
-	elseif curStep == 640 then
+	elseif curStep == 639 then
 		setProperty('defaultCamZoom', getProperty('defaultCamZoom') + 0.1);
 		bumpThing = true;
 		runHaxeFunction('setPerspectiveShader', {});
