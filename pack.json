@@ -1,9 +1,9 @@
 {
 	"name": "VS Tabi Revival",
-	"description": "ALL CREDITS ARE IN ORIGINAL TABI GAMEBANANA PAGE",
+	"description": "This is FANMADE Tabi Revival Psych Engine Version. \nCredits:\n\nTechniktil : Porter\nBaranMuzu : Porter\n\nCheck Original Page to see the WHOLE Credits : https://gamebanana.com/mods/286388",
 	"restart":false,
 	"runsGlobally": false,
-	"color": [170, 0, 255],
+	"color": [243, 196, 116],
 	"discordRPC": "863222024192262205",
 	"iconFramerate": 10
 }
