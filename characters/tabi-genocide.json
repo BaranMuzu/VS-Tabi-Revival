@@ -13,8 +13,8 @@
 		},
 		{
 			"offsets": [
-				247,
-				13
+				275,
+				15
 			],
 			"loop": false,
 			"anim": "singLEFT",
@@ -24,8 +24,8 @@
 		},
 		{
 			"offsets": [
-				13,
-				-153
+				15,
+				-150
 			],
 			"loop": false,
 			"anim": "singDOWN",
@@ -35,8 +35,8 @@
 		},
 		{
 			"offsets": [
-				130,
-				135
+				145,
+				150
 			],
 			"loop": false,
 			"anim": "singUP",
@@ -46,8 +46,8 @@
 		},
 		{
 			"offsets": [
-				18,
-				-72
+				20,
+				-80
 			],
 			"loop": false,
 			"anim": "singRIGHT",
@@ -60,8 +60,8 @@
 	"no_antialiasing": false,
 	"image": "characters/tabi-genocide",
 	"position": [
-		-70,
-		0
+		0,
+		-50
 	],
 	"healthicon": "tabi-genocide",
 	"flip_x": false,
@@ -71,10 +71,10 @@
 		99
 	],
 	"camera_position": [
-		50,
-		50
+		0,
+		0
 	],
 	"sing_duration": 6.1,
-	"scale": 0.85,
+	"scale": 0.9,
 	"_editor_isPlayer": false
 }
