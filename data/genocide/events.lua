@@ -102,12 +102,14 @@ end
 
 function onUpdatePost(elapsed)
 	if forceUpdateCenter then
-		callMethod('healthBar.updateBar', {});
+		local oldPercent = getProperty('healthBar.percent');
+		setProperty('healthBar.percent', 0.00001);
+		setProperty('healthBar.percent', oldPercent);
 	end
 end
 
 function opponentNoteHit(index, noteData, noteType, isSustainNote)
 	if getHealth() >= 0.1 then
-		addHealth(-((0.03 * (getHealth() + 0.2)) * (isSustainNote and 0.75 or 1)));
+		addHealth(-((0.023 * (getHealth() + 0.2)) * (isSustainNote and 0.75 or 1)));
 	end
 end
