@@ -14,6 +14,10 @@ function onCreatePost()
 end
 
 function onSongStart()
+	if getProperty('inCutscene') then
+		return;
+	end
+
 	setProperty('camGame.zoom', 1.5);
 	setProperty('defaultCamZoom', 1.5);
 	setProperty('black.alpha', 0);

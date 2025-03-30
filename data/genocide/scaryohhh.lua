@@ -4,17 +4,19 @@ function onCreate()
 	setProperty('skipCountdown', true);
 	setVar('sorry', false);
 
-	initLuaShader('wavy');
+	if shadersEnabled then
+		initLuaShader('wavy');
 
-	makeLuaSprite('shaderHeat');
-	setSpriteShader('shaderHeat', 'wavy');
-	setShaderFloat('shaderHeat', 'iTime', 0);
-	setShaderFloat('shaderHeat', 'intensity', 4);
+		makeLuaSprite('shaderHeat');
+		setSpriteShader('shaderHeat', 'wavy');
+		setShaderFloat('shaderHeat', 'iTime', 0);
+		setShaderFloat('shaderHeat', 'intensity', 4);
 
-	addHaxeLibrary("ShaderFilter", "openfl.filters")
-    runHaxeCode([[
-        game.camGame.setFilters([new ShaderFilter(game.getLuaObject("shaderHeat").shader)]);
-    ]])
+		addHaxeLibrary("ShaderFilter", "openfl.filters")
+		runHaxeCode([[
+			game.camGame.setFilters([new ShaderFilter(game.getLuaObject("shaderHeat").shader)]);
+		]])
+	end
 
 	makeLuaSprite('fireSprite');
 	makeGraphic('fireSprite', screenWidth * 2, screenHeight * 2, '000000');
@@ -42,7 +44,9 @@ end
 
 function onUpdatePost(elapsed)
 	time = time + elapsed;
-	setShaderFloat('shaderHeat', 'iTime', time);
+	if shadersEnabled then
+		setShaderFloat('shaderHeat', 'iTime', time);
+	end
 
 	local target = getProperty('defaultCamZoom') + extraZoom;
 	if getProperty('gfSection') then

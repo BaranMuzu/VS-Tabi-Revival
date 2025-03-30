@@ -1,0 +1,101 @@
+{
+    "lines": [
+        {
+            "music": "tabi-theme",
+            "volume": 0.4,
+            "bg": "blur",
+            "expression": "happy",
+            "char": "gf",
+            "text": "Good job babe!",
+            "audio": "last-chance/GF 9"
+        },
+        {
+            "char": "Tabi",
+            "expression": "angry",
+            "audio": "last-chance/Tabi Chop 1",
+            "text": "You really can't take the hint, can you?",
+            "boxPos": "right"
+        },
+        {
+            "char": "Tabi",
+            "expression": "angry",
+            "audio": "last-chance/Tabi Chop 2",
+            "text": "Don't you see what she is doing?",
+            "boxPos": "right"
+        },
+        {
+            "char": "Tabi",
+            "expression": "angry",
+            "audio": "last-chance/Tabi Chop 3",
+            "text": "She's just, using you!",
+            "boxPos": "right"
+        },
+        {
+            "char": "Tabi",
+            "expression": "angry",
+            "audio": "last-chance/Tabi Chop 4",
+            "text": "All she does is feed you emotions filled with lies.",
+            "boxPos": "right"
+        },
+        {
+            "char": "Tabi",
+            "expression": "angry",
+            "audio": "last-chance/Tabi Chop 5",
+            "text": "I made that same mistake.",
+            "boxPos": "right"
+        },
+        {
+            "char": "Tabi",
+            "expression": "angry",
+            "audio": "last-chance/Tabi Chop 6",
+            "text": "I gave her my heart...",
+            "boxPos": "right"
+        },
+        {
+            "char": "Tabi",
+            "expression": "angry",
+            "audio": "last-chance/Tabi CHop 7",
+            "text": "...and she left it in PIECES!",
+            "boxPos": "right"
+        },
+        {
+            "char": "Tabi",
+            "expression": "angry",
+            "audio": "last-chance/Tabi Chop8",
+            "text": "Do you still think...",
+            "boxPos": "right"
+        },
+        {
+            "char": "Tabi",
+            "expression": "angry",
+            "audio": "last-chance/Tabi Chop 9",
+            "text": "THIS IS SOME KIND OF JOKE?!?",
+            "boxPos": "right"
+        },
+        {
+            "char": "BF",
+            "expression": "dumbass",
+            "text": "Beep!",
+            "audio": "last-chance/3",
+            "boxPos": "left"
+        },
+        {
+            "char": "Tabi",
+            "expression": "angry-2",
+            "audio": "last-chance/4",
+            "text": "Ughhh. Fine, but don't say I didn't warn you.",
+            "boxPos": "right"
+        }
+    ],
+
+    "notes": [
+        "there's 3 bg types",
+        "1) black, just a black screen",
+        "2) blur, it's the game window but blurred",
+        "3) other, whatever the bg is set if not the first two is an image in images/dialogue/panels/",
+        "if there's no text, make the dialogue box invisible",
+        "if there's an audio tag play that audio when the line happens",
+        "if there's a music tag change the bg music",
+        "if a character's expression is 'none', make the portrait invisible" 
+    ]
+}

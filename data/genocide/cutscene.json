@@ -1,0 +1,195 @@
+{
+    "lines": [
+        {
+            "music": "pre-genocide",
+            "volume": 0.3,
+            "bg": "blur",
+            "expression": "shocked-hurt",
+            "char": "BF",
+            "text": "Bee!? Bee!?",
+            "audio": "genocide/bf6",
+            "boxPos": "left"
+        },
+        {
+            "bg": "blur",
+            "expression": "hurt",
+            "char": "GF",
+            "text": "*groans*",
+            "audio": "genocide/2"
+        },
+        {
+            "bg": "blur",
+            "expression": "hurt",
+            "char": "GF",
+            "text": "Don't worry hun... I'm alright.",
+            "audio": "genocide/3"
+        },
+        {
+            "bg": "blur",
+            "expression": "hurt-cry",
+            "char": "GF",
+            "text": "Oh my god, you're bleeding! Are you okay?",
+            "audio": "genocide/4"
+        },
+        {
+            "bg": "blur",
+            "expression": "cry",
+            "char": "Tabi",
+            "text": "Shut up...",
+            "audio": "genocide/5"
+        },
+        {
+            "bg": "blur",
+            "expression": "cry-2",
+            "char": "Tabi",
+            "text": "You don't mean that...",
+            "audio": "genocide/6"
+        },
+        {
+            "bg": "blur",
+            "expression": "hurt-mad",
+            "char": "GF",
+            "text": "Seriously dude! What the fuck is your problem?!?!",
+            "audio": "genocide/7"
+        },
+        {
+            "bg": "blur",
+            "expression": "hurt",
+            "char": "GF",
+            "text": "Wait... TABI?!?1",
+            "audio": "genocide/GF missing line",
+            "lineVolume": 0.5
+        },
+        {
+            "bg": "blur",
+            "expression": "hurt",
+            "char": "Tabi",
+            "text": "Hehehe. Oh, so you DO remember me.",
+            "audio": "genocide/9"
+        },
+        {
+            "bg": "blur",
+            "expression": "cry",
+            "char": "Tabi",
+            "text": "I did everything... to try to turn myself back to normal.",
+            "audio": "genocide/8"
+        },
+        {
+            "bg": "blur",
+            "expression": "cry",
+            "char": "Tabi",
+            "text": "But the moment I tried reaching out for your help, I see you... with HIM!",
+            "audio": "genocide/bbb"
+        },
+        {
+            "bg": "blur",
+            "expression": "cry-2",
+            "char": "Tabi",
+            "text": "So did none of our love matter?",
+            "audio": "genocide/10"
+        },
+        {
+            "bg": "blur",
+            "expression": "cry",
+            "char": "Tabi",
+            "text": "Our talks?",
+            "audio": "genocide/11"
+        },
+        {
+            "bg": "blur",
+            "expression": "cry",
+            "char": "Tabi",
+            "text": "Our laughs?",
+            "audio": "genocide/12"
+        },
+        {
+            "bg": "blur",
+            "expression": "cry-2",
+            "char": "Tabi",
+            "text": "GOD, I spent so much MONEY for you.. and THIS is how you repay me?!?!",
+            "audio": "genocide/13"
+        },
+        {
+            "bg": "blur",
+            "expression": "cry-2",
+            "char": "Tabi",
+            "text": "Everything is gone because of you... and that TWO-FACED FUCK YOU CALL A FATHER!!",
+            "audio": "genocide/14"
+        },
+        {
+            "bg": "blur",
+            "expression": "cry",
+            "char": "Tabi",
+            "text": "Look at you.. doing anything for her love..",
+            "audio": "genocide/TABIGENOCHOP1"
+        },
+        {
+            "bg": "blur",
+            "expression": "cry-2",
+            "char": "Tabi",
+            "text": "..but you know I won't stop until I see her GONE!",
+            "audio": "genocide/TABIGENOCHOP2"
+        },
+        {
+            "bg": "blur",
+            "expression": "black",
+            "char": "Tabi",
+            "text": "Your dad broke my body, and you broke my heart.",
+            "audio": "genocide/TABIGENOCHOP3"
+        },
+        {
+            "bg": "blur",
+            "expression": "black",
+            "char": "Tabi",
+            "text": "And you know what..",
+            "audio": "genocide/TABIGENOCHOP4"
+        },
+        {
+            "bg": "blur",
+            "expression": "scream",
+            "char": "Tabi",
+            "text": "I DONT CARE ANYMORE!!!",
+            "audio": "genocide/TABIGENOCHOP5"
+        },
+        {
+            "bg": "blur",
+            "expression": "cry-2",
+            "char": "Tabi",
+            "text": "I CAN'T STAND this CURSE YOU BROUGHT ON ME!",
+            "audio": "genocide/TABIGENOCHOP6"
+        },
+        {
+            "bg": "blur",
+            "expression": "cry-2",
+            "char": "Tabi",
+            "text": "AND I WON'T LET YOU GET IN MY WAY!!",
+            "audio": "genocide/TABIGENOCHOP7"
+        },
+        {
+            "bg": "blur",
+            "expression": "angry-hurt",
+            "char": "BF",
+            "text": "*BF gets up*",
+            "boxPos": "left"
+        },
+        {
+            "bg": "blur",
+            "expression": "scream",
+            "char": "Tabi",
+            "text": "RRAAAAAHHHHHH!!! JUST DIIIEEEEE!!!!",
+            "boxPos": "right",
+            "audio": "genocide/19"
+        }
+    ],
+
+    "notes": [
+        "there's 3 bg types",
+        "1) black, just a black screen",
+        "2) blur, it's the game window but blurred",
+        "3) other, whatever the bg is set if not the first two is an image in images/dialogue/panels/",
+        "if there's no text, make the dialogue box invisible",
+        "if there's an audio tag play that audio when the line happens",
+        "if there's a music tag change the bg music",
+        "if a character's expression is 'none', make the portrait invisible" 
+    ]
+}

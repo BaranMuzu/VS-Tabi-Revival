@@ -6,6 +6,10 @@ function onCreate()
 end
 
 function onSongStart()
+	if getProperty('inCutscene') then
+		return;
+	end
+
 	setProperty('opponentCameraOffset[0]', getProperty('opponentCameraOffset[0]') - 200);
 	callMethod('camGame.fade', {FlxColor('000000'), 10, true, nil, true});
 	setProperty('camGame.scroll.x', -450);

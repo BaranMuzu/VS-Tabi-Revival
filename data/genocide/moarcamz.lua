@@ -16,8 +16,14 @@ function onCreatePost()
 		runHaxeCode([[
 			var cam = game.variables.get("cam_]]..characterNames[i]..[[");
 			FlxG.cameras.add(cam);
-			cam.setFilters([new ShaderFilter(game.getLuaObject("shaderHeat").shader)]);
 		]]);
+
+		if shadersEnabled then
+			runHaxeCode([[
+				var cam = game.variables.get("cam_]]..characterNames[i]..[[");
+				cam.setFilters([new ShaderFilter(game.getLuaObject("shaderHeat").shader)]);
+			]]);
+		end
 	end
 	setProperty('cam_dad.x', (-screenWidth / 2) - 100);
 	setProperty('cam_boyfriend.x', screenWidth + 100);
@@ -145,18 +151,6 @@ function onUpdatePost(elapsed)
 			cam.follow(point, game.camGame.style, 0.1);
 		]]);
 		setProperty('cam_'..characterNames[i]..'.zoom', lerp(getProperty('cam_'..characterNames[i]..'.zoom'), 1.1, 0.05));
-	end
-
-	if getPropertyFromClass('states.PlayState', 'chartingMode') then
-		if keyboardJustPressed('ONE') then
-			callMethod('KillNotes');
-			callMethodFromClass('flixel.FlxG', 'sound.music.onComplete', {});
-		end
-
-		if keyboardJustPressed('TWO') then
-			callMethod('setSongTime', {getSongPosition() + 10000});
-			callMethod('clearNotesBefore', {getSongPosition()});
-		end
 	end
 end
 

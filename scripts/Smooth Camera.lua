@@ -1,4 +1,4 @@
-local camBetterFollowLerp = 0.1;
+local camBetterFollowLerp = 0.1 * 5;
 
 local characterToFocus = 'dad';
 local overrideCamPos = false;
@@ -8,7 +8,7 @@ luaDebugMode = true;
 function onCreatePost()
 	createInstance('camBetterFollow', 'flixel.FlxObject', {getProperty('camFollow.x'), getProperty('camFollow.y'), 2, 2});
 	runHaxeCode([[
-		game.camGame.follow(game.variables.get('camBetterFollow'), 0.04);
+		game.camGame.target = game.variables.get('camBetterFollow');
 	]]);
 end
 
@@ -53,7 +53,7 @@ function getCharPos(camCharacter)
 	return charCamPosition;
 end
 
-function onUpdatePost(elapsed)
+function onUpdate(elapsed)
 	local realCameraPos = getCharPos(characterToFocus);
 
 	local displacement = getDisplacement(characterToFocus);

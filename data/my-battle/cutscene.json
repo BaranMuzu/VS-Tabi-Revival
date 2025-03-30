@@ -1,0 +1,200 @@
+{
+    "lines": [
+        {
+            "music": "ringtone",
+            "bg": "black",
+            "char": "",
+            "text": "(phone rings)"
+        },
+        {
+            "music": "phone-call",
+            "bg": "Phone_talk_1",
+            "char": "bf",
+            "text": "Baap?",
+            "audio": "my-battle/2",
+            "boxPos": "right"
+        },
+        {
+            "bg": "Phone_talk_1",
+            "char": "gf",
+            "text": "Haiii babee!",
+            "audio": "my-battle/GF 1",
+            "boxPos": "left"
+        },
+        {
+            "char": "gf",
+            "text": "Hey. There's this new fancy restuarant that I wanna go to, and I want YOU to come with me.",
+            "boxPos": "left",
+            "audio": "my-battle/GF 2"
+        },
+        {
+            "bg": "Phone_talk_2",
+            "char": "bf",
+            "text": "Uhhh....",
+            "boxPos": "right",
+            "audio": "my-battle/4"
+        },
+        {
+            "bg": "phone_talk_5",
+            "char": "gf",
+            "text": "Oh yeah! Don't worry about it. My family's rich as hell, remember? It's gonna be on me.",
+            "audio": "my-battle/GF 3",
+            "boxPos": "left"
+        },
+        {
+            "bg": "Phone_talk_7",
+            "char": "bf",
+            "text": "Ay!",
+            "boxPos": "right",
+            "audio": "my-battle/6"
+        },
+        {
+            "bg": "phone_talk_5",
+            "char": "gf",
+            "text": "Hehehe! Meet my at my place. I'll take you there.",
+            "audio": "my-battle/GF 4",
+            "boxPos": "left"
+        },
+        {
+            "char": "transition"
+        },
+        {
+            "bg": "gf-looks-back",
+            "char": "gf",
+            "text": "Aw Shit. Babe, I gotta tinkle. Can you wait here for a bit?",
+            "boxPos": "left",
+            "audio": "my-battle/GF 5"
+        },
+        {
+            "bg": "gf-looks-back",
+            "char": "bf",
+            "text": "*?*",
+            "boxPos": "right",
+            "audio": "bf5"
+        },
+        {
+            "bg": "gf-looks-back",
+            "char": "GF",
+            "text": "AWWWW!!! You're gonna take me there? You're so sweet.",
+            "boxPos": "left",
+            "audio": "my-battle/GF 6"
+        },
+        {
+            "music": "tabi-theme",
+            "volume": 0.4,
+            "bg": "blur",
+            "char": "bf",
+            "expression": "idle",
+            "text": "*touches GF's shoulder*",
+            "boxPos": "left",
+            "audio": "bf1"
+        },
+        {
+            "bg": "blur",
+            "char": "gf",
+            "expression": "huh",
+            "text": "Yea? What's up?",
+            "boxPos": "right",
+            "audio": "my-battle/GF 7"
+        },
+        {
+            "bg": "blur",
+            "char": "bf",
+            "expression": "idle",
+            "text": "*Points at Tabi*",
+            "boxPos": "left",
+            "audio": "bf2"
+        },
+        {
+            "bg": "blur",
+            "char": "Tabi",
+            "expression": "black",
+            "text": "I see you already found someone else.",
+            "boxPos": "right",
+            "audio": "my-battle/14"
+        },
+        {
+            "bg": "blur",
+            "char": "gf",
+            "expression": "huh",
+            "text": "Yea um, I'm sorry. Who are you?",
+            "boxPos": "right",
+            "audio": "my-battle/GF 8"
+        },
+        {
+            "bg": "blur",
+            "char": "Tabi",
+            "expression": "angry-2",
+            "text": "Playing dumb won't get you anywhere Dearest...",
+            "boxPos": "right",
+            "audio": "my-battle/tabichopagain1"
+        },
+        {
+            "bg": "blur",
+            "char": "Tabi",
+            "expression": "angry-2",
+            "text": "..And as your for you...",
+            "boxPos": "right",
+            "audio": "my-battle/tabichopagain2"
+        },
+        {
+            "bg": "blur",
+            "char": "Tabi",
+            "expression": "angry-2",
+            "text": "GET THE HELL OUT OF HERE!",
+            "boxPos": "right",
+            "audio": "my-battle/tabichopagaian3"
+        },
+        {
+            "bg": "blur",
+            "char": "Tabi",
+            "expression": "angry-2",
+            "text": "Me..",
+            "boxPos": "right",
+            "audio": "my-battle/tabichopagain4"
+        },
+        {
+            "bg": "blur",
+            "char": "Tabi",
+            "expression": "angry-2",
+            "text": "..and YOUR GIRL...",
+            "boxPos": "right",
+            "audio": "my-battle/tabichopagain5"
+        },
+        {
+            "bg": "blur",
+            "char": "Tabi",
+            "expression": "angry-2",
+            "text": "..need to have a little talk.",
+            "boxPos": "right",
+            "audio": "my-battle/tabichopagain6"
+        },
+        {
+            "bg": "blur",
+            "char": "bf",
+            "expression": "grin",
+            "audio": "my-battle/mic",
+            "text": "*Throws a mic at him*",
+            "boxPos": "left"
+        },
+        {
+            "bg": "blur",
+            "char": "Tabi",
+            "expression": "mic",
+            "text": "If that's what it'll take for you to leave... So be it.",
+            "boxPos": "right",
+            "audio": "my-battle/17"
+        }
+    ],
+
+    "notes": [
+        "there's 3 bg types",
+        "1) black, just a black screen",
+        "2) blur, it's the game window but blurred",
+        "3) other, whatever the bg is set if not the first two is an image in images/dialogue/panels/",
+        "if there's no text, make the dialogue box invisible",
+        "if there's an audio tag play that audio when the line happens",
+        "if there's a music tag change the bg music",
+        "if a character's expression is 'none', make the portrait invisible" 
+    ]
+}
