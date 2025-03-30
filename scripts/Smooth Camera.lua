@@ -34,6 +34,18 @@ function onMoveCamera(character)
 	end
 end
 
+function onEvent(eventName, value1, value2, strumTime)
+	if eventName == "" then
+		if value1 == "over" then
+			overrideCamPos = true
+			characterToFocus = "gf";
+		end
+		if value1 == "ride" then
+			overrideCamPos = false
+		end
+	end
+end
+
 function getCharPos(camCharacter)
 	local charCamPosition = {0, 0};
 	if camCharacter == 'dad' then

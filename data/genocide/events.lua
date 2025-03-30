@@ -1,3 +1,5 @@
+local letend = false
+
 function onCreatePost()
 	makeLuaSprite('lighting');
 	makeGraphic('lighting', screenWidth, screenHeight, 'FF0000');
@@ -116,4 +118,14 @@ function opponentNoteHit(index, noteData, noteType, isSustainNote)
 	if getHealth() >= 0.1 then
 		addHealth(-((0.023 * (getHealth() + 0.2)) * (isSustainNote and 0.75 or 1)));
 	end
+end
+
+function onEndSong()
+    if not letend then
+        startVideo("credits")
+        letend = true
+        return Function_Stop
+    else
+        return Function_Continue
+    end
 end
