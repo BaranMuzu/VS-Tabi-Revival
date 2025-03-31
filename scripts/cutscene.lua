@@ -21,7 +21,7 @@ local spriteNames = {'dialogueBackground', 'dialoguePortrait', 'dialogueBoxIG', 
 
 local realTimer = 0;
 function onUpdate(elapsed)
-    if not startShit and isStoryMode or not startShit and not isStoryMode and whatevermodfreeplay then
+    if not startShit and (isStoryMode or whatevermodfreeplay) then
         if callMethodFromClass('backend.Paths', 'formatToSongPath', {songName}) == 'genocide' then
             setProperty('camOther.bgColor', getColorFromName('black'));
             cameraFlash('camOther', 'red', 4, false)
@@ -133,6 +133,7 @@ function endDialogue()
     canExit = false;
     doTweenAlpha('helloUI', 'camHUD', 1, 1);
     doTweenAlpha('byeDialogue', 'camOther', 0, 1);
+    runHaxeCode('game.camOther.stopFX();');
 end
 
 function onTweenCompleted(tag)
@@ -227,7 +228,7 @@ function medialogingsobad(line)
         else
             setProperty('dialoguePortrait.visible', true);
             setProperty("dialoguePortrait.alpha", 1)
-            loadGraphic('dialoguePortrait', 'dialogue/characters/'..char..'/'..expression);
+            loadGraphic('dialoguePortrait', characterlinePath..char..'/'..expression);
             scaleObject('dialoguePortrait', 0.7, 0.7, true);
             setProperty('dialoguePortrait.x', screenWidth * (isLeft and 0.8 or 0.2) - getProperty('dialoguePortrait.width') / 2);
             setProperty('dialoguePortrait.y', 400 - getProperty('dialoguePortrait.height') / 2);
@@ -242,7 +243,7 @@ function writeText(text)
     textindex = 1
     currentText = text
     setTextString('dialogueTextIG', string.sub(currentText, 1, textindex))
-    runTimer('imtypingit', 0.05, string.len(currentText))
+    runTimer('imtypingit', 0.05, string.len(currentText)+1)
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)

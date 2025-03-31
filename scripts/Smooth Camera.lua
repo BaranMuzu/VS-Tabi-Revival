@@ -80,7 +80,6 @@ function onUpdate(elapsed)
 	if overrideCamPos then
 		realCameraPos[1] = camPosToOverrideWith[1];
 		realCameraPos[2] = camPosToOverrideWith[2];
-		debugPrint('overriding cam position???');
 	end
 
 	setProperty('camBetterFollow.x', lerp(getProperty('camBetterFollow.x'), getProperty('camFollow.x'), camBetterFollowLerp));
