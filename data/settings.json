@@ -1,0 +1,9 @@
+[
+	{
+		"save": "freeplaydialogues",
+		"name": "Freeplay Dialogues",
+		"type": "bool",
+		"description": "Decide if dialogues should play on freeplay too or not",
+		"value": false
+	}
+]

@@ -2,6 +2,7 @@ local startShit = false
 local canDoShit = true
 local canExit = true
 local canPressShit = true
+local whatevermodfreeplay = getModSetting("freeplaydialogues")
 
 local textindex = 1
 local currentText = ""
@@ -20,7 +21,7 @@ local spriteNames = {'dialogueBackground', 'dialoguePortrait', 'dialogueBoxIG', 
 
 local realTimer = 0;
 function onUpdate(elapsed)
-    if not startShit and isStoryMode then
+    if not startShit and isStoryMode or not startShit and not isStoryMode and whatevermodfreeplay then
         if callMethodFromClass('backend.Paths', 'formatToSongPath', {songName}) == 'genocide' then
             setProperty('camOther.bgColor', getColorFromName('black'));
             cameraFlash('camOther', 'red', 4, false)
@@ -42,7 +43,6 @@ function onUpdate(elapsed)
 
         if realTimer <= 0 then
             realTimer = -1;
-            debugPrint('finished?');
             callMethod('camOther.fade', {getColorFromName('black'), 2.3, true});
             setProperty('camOther.bgColor', 0);
             openCustomSubstate("dialoguesa", true)
@@ -62,6 +62,7 @@ function onCustomSubstateCreatePost(name)
         setObjectCamera("dialoguePortrait", "other");
         setObjectOrder("dialoguePortrait", 4)
         addLuaSprite("dialoguePortrait")
+        setProperty("dialoguePortrait.alpha", 0)
 
         makeLuaSprite("dialogueBoxIG", "dialogue/box", 520, 400)
         setObjectCamera("dialogueBoxIG", "other")
@@ -204,7 +205,6 @@ function medialogingsobad(line)
     end
 
     if currentBackground ~= background and background ~= nil and background ~= '' and background ~= 1 then
-        debugPrint(background);
         setProperty('dialogueBackground.alpha', 1);
         scaleObject('dialogueBackground', 1, 1, true);
         if background == 'blur' then
@@ -223,8 +223,10 @@ function medialogingsobad(line)
     if currentPortrait ~= char and char ~= nil then
         if char == 'empty' or expression == 'none' then
             setProperty('dialoguePortrait.visible', false);
+            setProperty("dialoguePortrait.alpha", 0)
         else
             setProperty('dialoguePortrait.visible', true);
+            setProperty("dialoguePortrait.alpha", 1)
             loadGraphic('dialoguePortrait', 'dialogue/characters/'..char..'/'..expression);
             scaleObject('dialoguePortrait', 0.7, 0.7, true);
             setProperty('dialoguePortrait.x', screenWidth * (isLeft and 0.8 or 0.2) - getProperty('dialoguePortrait.width') / 2);
@@ -256,6 +258,7 @@ function onTimerCompleted(tag, loops, loopsLeft)
 end
 
 -- im sorry baran but this get no used anymore 😭
+-- man im so useless porter for this.
 function loadingdialogueshahaohhitil()
     local songName = songName or "unknown"
     local linePath = "data/" .. songName .. "/cutsceneLines.txt"
