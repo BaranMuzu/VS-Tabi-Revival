@@ -1,4 +1,4 @@
-local camBetterFollowLerp = 0.1 * 5;
+local camBetterFollowLerp = 0.1;
 
 local characterToFocus = 'dad';
 local overrideCamPos = false;
