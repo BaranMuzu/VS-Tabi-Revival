@@ -121,7 +121,7 @@ function opponentNoteHit(index, noteData, noteType, isSustainNote)
 end
 
 function onEndSong()
-    if not letend then
+    if not letend and inStoryMode then
         startVideo("credits")
         letend = true
         return Function_Stop

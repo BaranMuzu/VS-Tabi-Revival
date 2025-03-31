@@ -4694,11 +4694,6 @@
 				147000,
 				[
 					[
-						"Set Property",
-						"bumpThing",
-						"false"
-					],
-					[
 						"Camera Modulo Change",
 						"0",
 						"0"
@@ -4708,7 +4703,7 @@
 		],
 		"player2": "tabi",
 		"gfVersion": "gf",
-		"song": "my-battle",
+		"song": "My Battle",
 		"stage": "restaurant",
 		"needsVoices": true,
 		"speed": 2.3,

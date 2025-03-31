@@ -2,6 +2,7 @@ local camBetterFollowLerp = 0.1 * 5;
 
 local characterToFocus = 'dad';
 local overrideCamPos = false;
+local camPosToOverrideWith = {0, 0};
 
 luaDebugMode = true;
 
@@ -29,16 +30,20 @@ function getDisplacement(charName)
 end
 
 function onMoveCamera(character)
-	if not overrideCamPos then
-		characterToFocus = character;
-	end
+	characterToFocus = character;
 end
 
 function onEvent(eventName, value1, value2, strumTime)
 	if eventName == "" then
 		if value1 == "over" then
+			local dadCam = getCharPos('dad');
+			local bfCam = getCharPos('boyfriend');
+			camPosToOverrideWith = {
+				(dadCam[1] + bfCam[1]) / 2,
+				(dadCam[2] + bfCam[2]) / 2 - 100
+			};
+
 			overrideCamPos = true
-			characterToFocus = "gf";
 		end
 		if value1 == "ride" then
 			overrideCamPos = false
@@ -71,6 +76,12 @@ function onUpdate(elapsed)
 	local displacement = getDisplacement(characterToFocus);
 	realCameraPos[1] = realCameraPos[1] + displacement[1];
 	realCameraPos[2] = realCameraPos[2] + displacement[2];
+
+	if overrideCamPos then
+		realCameraPos[1] = camPosToOverrideWith[1];
+		realCameraPos[2] = camPosToOverrideWith[2];
+		debugPrint('overriding cam position???');
+	end
 
 	setProperty('camBetterFollow.x', lerp(getProperty('camBetterFollow.x'), getProperty('camFollow.x'), camBetterFollowLerp));
 	setProperty('camBetterFollow.y', lerp(getProperty('camBetterFollow.y'), getProperty('camFollow.y'), camBetterFollowLerp));

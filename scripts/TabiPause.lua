@@ -8,7 +8,7 @@ local arts = {
 
 local buttons = {"resume", "retry", "options", "exit"}
 local songnames = {"my-battle", "last-chance", "genocide"} -- idk
-local allobject = {"resume", "retry", "options", "exit", "songName", "pausebg", "bg-overlay", "art", "fade"}
+local allobject = {"resume", "retry", "options", "exit", "songName", "pausebg", "bgOverlayingLay", "art", "fade"}
 
 function onCreate()
     precacheImage("pause/bg")
@@ -50,19 +50,26 @@ function onCustomSubstateCreatePost(name) -- ON CREATEpost BUT WHEN YOU PAUSE TH
         soundFadeIn("music", 2, 0, 0.8)
 
         makeLuaSprite('fade', nil, 0, 0)
-        makeGraphic("fade", 1280, 720, '000000')
+        makeGraphic("fade", screenWidth, screenHeight, 'black')
         setObjectCamera('fade', 'other')
         screenCenter('fade', 'xy')
         addLuaSprite('fade', true)
         setObjectOrder("fade", 7)
         setProperty('fade.alpha', 0)
-        doTweenAlpha("fade", "fade", 0.8, 0.01, 'linear')
+        doTweenAlpha("fade", "fade", 0.6, 0.4, 'quartInOut')
 
-        makeLuaSprite("bg-overlay", "pause/bg-overlay", 0,0)
-        setObjectCamera("bg-overlay", 'other')
-        addLuaSprite("bg-overlay", false)
-        setProperty('bg-overlay.alpha', 0.5)
-        setObjectOrder("bg-overlay", 7)
+        makeLuaSprite("bgOverlayingLay", "pause/bg-overlay", 0,0)
+        setObjectCamera("bgOverlayingLay", 'other')
+        addLuaSprite("bgOverlayingLay", false)
+        setProperty('bgOverlayingLay.alpha', 0.5)
+        setObjectOrder("bgOverlayingLay", 7)
+
+        makeLuaSprite("art", "pause/arts/tabi", -300,70) -- 50
+        setObjectCamera("art", 'other')
+        addLuaSprite("art", false)
+        setProperty('art.alpha', 0)
+        setObjectOrder("art", 10)
+        doTweenAlpha("arta", "art", 1, 1.5, "quartOut")
 
         makeLuaSprite("pausebg", "pause/bg", 0,0)
         setObjectCamera("pausebg", 'other')
@@ -71,27 +78,22 @@ function onCustomSubstateCreatePost(name) -- ON CREATEpost BUT WHEN YOU PAUSE TH
         setProperty('pausebg.alpha', 1)
         setObjectOrder("pausebg", 11)
 
-        makeLuaSprite("songName", "pause/names/" .. songName, 100,630)
+        local songID = callMethodFromClass('backend.Paths', 'formatToSongPath', {songName});
+
+        makeLuaSprite("songName", "pause/names/" .. songID, 100,630)
         setObjectCamera("songName", 'other')
         addLuaSprite("songName", false)
         setProperty('songName.alpha', 1)
         setObjectOrder("songName", 12)
-        if songName == "genocide" then
+        if songID == "genocide" then
             setProperty("songName.x", 110)
         end
-        
-        makeLuaSprite("art", "pause/arts/tabi", -300,70) -- 50
-        setObjectCamera("art", 'other')
-        addLuaSprite("art", false)
-        setProperty('art.alpha', 0)
-        setObjectOrder("art", 10)
-        doTweenAlpha("arta", "art", 1, 1.5, "quartOut")
 
-        if songName == "my-battle" or songName == "last-chance" then
+        if songID == "my-battle" or songID == "last-chance" then
             loadGraphic("art", "pause/arts/tabi")
             doTweenX("artx", "art", -50, 1.5, "quartOut")
             scaleObject("art", 0.3, 0.3)
-        elseif songName == "genocide" then
+        elseif songID == "genocide" then
             setProperty("art.x", -700)
             setProperty("art.y", -70)
             scaleObject("art", 0.35, 0.35)

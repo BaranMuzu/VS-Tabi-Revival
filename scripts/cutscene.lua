@@ -21,7 +21,7 @@ local spriteNames = {'dialogueBackground', 'dialoguePortrait', 'dialogueBoxIG', 
 local realTimer = 0;
 function onUpdate(elapsed)
     if not startShit and isStoryMode then
-        if songName == 'genocide' then
+        if callMethodFromClass('backend.Paths', 'formatToSongPath', {songName}) == 'genocide' then
             setProperty('camOther.bgColor', getColorFromName('black'));
             cameraFlash('camOther', 'red', 4, false)
             playSound('crash', 1.5);
@@ -30,8 +30,10 @@ function onUpdate(elapsed)
             openCustomSubstate("dialoguesa", true)
         end
         setProperty('inCutscene', true);
-        setProperty('startedCountdown', false);
-        setPropertyFromClass('backend.Conductor', 'songPosition', -1);
+        if getProperty('skipCountdown') then
+            setProperty('startedCountdown', false);
+            setPropertyFromClass('backend.Conductor', 'songPosition', -1);
+        end
         startShit = true
     end
 
@@ -50,6 +52,7 @@ end
 
 function onCustomSubstateCreatePost(name)
     if name == 'dialoguesa' then
+        setProperty('camHUD.alpha', 0);
         makeLuaSprite('dialogueBackground', nil, 0, 0);
         setObjectCamera("dialogueBackground", "other");
         setObjectOrder("dialogueBackground", 3)
@@ -98,21 +101,19 @@ function onCustomSubstateUpdatePost(name, elapsed)
         if keyJustPressed("accept") then
             if canPressShit then
                 lineIndex = lineIndex + 1
+                playSound("dialogue/dialogue fucking clicking sound", 1, "idk")
                 if lineIndex <= #dialogueLines then
-                    playSound("dialogue/dialogue fucking clicking sound", 1, "idk")
                     stopSound("yea")
                     medialogingsobad(dialogueLines[lineIndex])
-                else
-                    closeCustomSubstate()
-                    close()
-                    stopEverythin()
+                elseif canExit then
+                    endDialogue();
                 end
             end
         end
-    end    
+    end
 end
 
-function stopEverythin()
+function destroyDialogue()
     stopSound('realMusic');
     stopSound('yea');
     removeLuaSprite('dialogueBoxIG')
@@ -121,37 +122,60 @@ function stopEverythin()
     removeLuaSprite('dialoguePortrait')
     removeLuaSprite('dialogueBackground')
     setProperty('inCutscene', false);
-    setProperty('startedCountdown', true);
-    setPropertyFromClass('backend.Conductor', 'songPosition', 0);
+    if getProperty('skipCountdown') then
+        setProperty('startedCountdown', true);
+        setPropertyFromClass('backend.Conductor', 'songPosition', 0);
+    end
+end
+
+function endDialogue()
+    canExit = false;
+    doTweenAlpha('helloUI', 'camHUD', 1, 1);
+    doTweenAlpha('byeDialogue', 'camOther', 0, 1);
+end
+
+function onTweenCompleted(tag)
+    if tag == 'byeDialogue' then
+        setProperty('camOther.alpha', 1);
+        closeCustomSubstate()
+        close()
+        destroyDialogue()
+    end
 end
 
 function medialogingsobad(line)
     local char = line.char or 'transition';
     local expression = line.expression or 'none';
     local text = line.text or '';
-    local boxPos = line.boxPos or 'left';
+    local boxPos = line.boxPos;
     local music = line.music or '';
     local sound = line.audio or '';
     local volume = line.volume or 1;
     local background = line.bg or 1;
 
     if char == 'transition' then
+        canPressShit = false;
+        cameraFade('camOther', 'black', 1, true);
+        runTimer('fadeBackIn');
         lineIndex = lineIndex + 1
-        medialogingsobad(dialogueLines[lineIndex])
         return;
     end
 
-    local isLeft = boxPos == 'left';
+    local isLeft = string.lower(char) == 'bf';
+
+    if boxPos ~= nil then
+        isLeft = boxPos == 'left';
+    end
 
     local amount = 40;
     local displayName = string.upper(char);
     local fontName = nil;
-    if char == "bf" then
+    if string.lower(char) == "bf" then
         fontName = "Graffiti City.otf";
-    elseif char == "gf" or char == "GF" then
+    elseif string.lower(char) == "gf" then
         fontName = "Restaurant.otf";
         amount = 45;
-    elseif char == "Tabi" then
+    elseif string.lower(char) == "tabi" then
         fontName = "Russian Angel.ttf";
         amount = 55;
         displayName = 'Tabi';
@@ -179,7 +203,8 @@ function medialogingsobad(line)
         playSound(music, volume, 'realMusic', true)
     end
 
-    if currentBackground ~= background and background ~= nil and background ~= '' then
+    if currentBackground ~= background and background ~= nil and background ~= '' and background ~= 1 then
+        debugPrint(background);
         setProperty('dialogueBackground.alpha', 1);
         scaleObject('dialogueBackground', 1, 1, true);
         if background == 'blur' then
@@ -202,7 +227,7 @@ function medialogingsobad(line)
             setProperty('dialoguePortrait.visible', true);
             loadGraphic('dialoguePortrait', 'dialogue/characters/'..char..'/'..expression);
             scaleObject('dialoguePortrait', 0.7, 0.7, true);
-            setProperty('dialoguePortrait.x', screenWidth * (boxPos == 'left' and 0.8 or 0.2) - getProperty('dialoguePortrait.width') / 2);
+            setProperty('dialoguePortrait.x', screenWidth * (isLeft and 0.8 or 0.2) - getProperty('dialoguePortrait.width') / 2);
             setProperty('dialoguePortrait.y', 400 - getProperty('dialoguePortrait.height') / 2);
         end
         currentBackground = background;
@@ -215,13 +240,18 @@ function writeText(text)
     textindex = 1
     currentText = text
     setTextString('dialogueTextIG', string.sub(currentText, 1, textindex))
-    runTimer('imtypingit', 0.05, string.len(text))
+    runTimer('imtypingit', 0.05, string.len(currentText))
 end
 
 function onTimerCompleted(tag, loops, loopsLeft)
     if tag == 'imtypingit' then
         setTextString('dialogueTextIG', string.sub(currentText, 1, textindex))
         textindex = textindex + 1
+    end
+    if tag == 'fadeBackIn' then
+        callMethod('camOther.fade', {getColorFromName('black'), 1, true});
+        medialogingsobad(dialogueLines[lineIndex])
+        canPressShit = true
     end
 end
 
@@ -250,7 +280,7 @@ function loadDialogueData()
     if not checkFileExists(path) then
         closeCustomSubstate()
         close()
-        stopEverythin()
+        destroyDialogue()
         return;
     end
     local content = getTextFromFile(path, false);

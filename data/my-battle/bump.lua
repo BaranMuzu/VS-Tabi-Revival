@@ -3,6 +3,8 @@ luaDebugMode = true;
 
 function onCreate()
 	triggerEvent("Set GF Speed", 2, nil)
+
+	if shadersEnabled then
 	initLuaShader('perspective');
 
 	makeLuaSprite('perspectiveShader');
@@ -17,6 +19,7 @@ function onCreate()
 			game.camGame.setFilters([filter]);
 		}
 	]]);
+	end
 end
 
 function onStepHit()
@@ -31,7 +34,7 @@ function onStepHit()
 	elseif curStep == 639 then
 		setProperty('defaultCamZoom', getProperty('defaultCamZoom') + 0.1);
 		bumpThing = true;
-		runHaxeFunction('setPerspectiveShader', {});
+		if shadersEnabled then runHaxeFunction('setPerspectiveShader', {}); end
 	elseif curStep == 760 then
 		triggerEvent('Camera Modulo Change', '999', '');
 		bumpThing = false;
@@ -74,7 +77,9 @@ function onUpdatePost(elapsed)
 		end
 
 		thing = lerp(thing, 0, 0.06);
-		setShaderFloat('perspectiveShader', 'depth', thing);
+		if shadersEnabled then
+			setShaderFloat('perspectiveShader', 'depth', thing);
+		end
 		setProperty('camGame.angle', lerp(getProperty('camGame.angle'), 0, 0.15));
 		setProperty('camHUD.angle', lerp(getProperty('camHUD.angle'), 0, 0.04));
 	end
