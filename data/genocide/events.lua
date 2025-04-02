@@ -14,6 +14,30 @@ function getFreeplayDialogueCheck()
 	end
 end
 
+function shouldRemoveHealth()
+	if versionUMM ~= nil then
+		if localPlay or onlinePlay then
+			return false;
+		end
+
+		if leftSide then
+			return false;
+		end
+	end
+
+	if getPropertyFromClass('Main', 'PSYCH_ONLINE_VERSION') ~= nil then
+		if isRoomConnected() then
+			return false;
+		end
+
+		if not playsAsBF() then
+			return false;
+		end
+	end
+
+	return true;
+end
+
 local letend = false
 local whatevermodfreeplay = getFreeplayDialogueCheck();
 
@@ -133,7 +157,7 @@ function onUpdatePost(elapsed)
 end
 
 function opponentNoteHit(index, noteData, noteType, isSustainNote)
-	if getHealth() >= 0.1 then
+	if getHealth() >= 0.1 and shouldRemoveHealth() then
 		addHealth(-((0.023 * (getHealth() + 0.2)) * (isSustainNote and 0.75 or 1)));
 	end
 end
