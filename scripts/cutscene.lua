@@ -149,7 +149,6 @@ function endDialogue()
     canExit = false;
     doTweenAlpha('helloUI', 'camHUD', 1, 1);
     doTweenAlpha('byeDialogue', 'camOther', 0, 1);
-    runHaxeCode('game.camOther.stopFX();');
 end
 
 function onTweenCompleted(tag)
@@ -274,6 +273,7 @@ function onTimerCompleted(tag, loops, loopsLeft)
         textindex = textindex + 1
     end
     if tag == 'fadeBackIn' then
+        runHaxeCode('game.camOther.stopFX();');
         callMethod('camOther.fade', {getColorFromName('black'), 1, true});
         medialogingsobad(dialogueLines[lineIndex])
         canPressShit = true
