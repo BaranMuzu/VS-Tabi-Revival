@@ -1,8 +1,10 @@
 local letend = false
+local whatevermodfreeplay = getModSetting("freeplaydialogues")
 
 function onCreatePost()
 	makeLuaSprite('lighting');
-	makeGraphic('lighting', screenWidth, screenHeight, 'FF0000');
+	makeGraphic('lighting', screenWidth * 2, screenHeight * 2, 'FF0000');
+        screenCenter('lighting')
 	setObjectCamera('lighting', 'camHUD');
 	addLuaSprite('lighting');
 	setProperty('lighting.blend', 0);
@@ -121,7 +123,7 @@ function opponentNoteHit(index, noteData, noteType, isSustainNote)
 end
 
 function onEndSong()
-    if not letend and inStoryMode then
+    if not letend and (isStoryMode or whatevermodfreeplay)
         startVideo("credits")
         letend = true
         return Function_Stop

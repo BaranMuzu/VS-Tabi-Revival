@@ -14,6 +14,8 @@ local lineIndex = 1
 
 local characterlinePath = "dialogue/characters/"
 local panelPath = "dialogue/panels/"
+local music = ""
+local volume = 1
 
 luaDebugMode = true;
 
@@ -150,9 +152,9 @@ function medialogingsobad(line)
     local expression = line.expression or 'none';
     local text = line.text or '';
     local boxPos = line.boxPos;
-    local music = line.music or '';
+    music = line.music or '';
     local sound = line.audio or '';
-    local volume = line.volume or 1;
+    volume = line.volume or 1;
     local background = line.bg or 1;
 
     if char == 'transition' then
@@ -202,7 +204,7 @@ function medialogingsobad(line)
     end
 
     if music ~= "" and music ~= nil then
-        playSound(music, volume, 'realMusic', true)
+        playSound(music, volume, 'realMusic')
     end
 
     if currentBackground ~= background and background ~= nil and background ~= '' and background ~= 1 then
@@ -237,6 +239,12 @@ function medialogingsobad(line)
     end
 
     writeText(text)
+end
+
+function onSoundFinished(tag)
+    if tag == 'realMusic' then
+        playSound(music, volume, 'realMusic')
+    end
 end
 
 function writeText(text)
