@@ -114,6 +114,8 @@ function onCustomSubstateUpdatePost(name, elapsed)
                    elseif lineIndex == 14 then
                       canLoop = false
                    end
+                elseif songName == 'Last Chance' then
+                    canLoop = false
                 end
                 if lineIndex <= #dialogueLines then
                     stopSound("yea")

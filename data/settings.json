@@ -1,9 +1,9 @@
 [
 	{
 		"save": "freeplaydialogues",
-		"name": "Freeplay Dialogues",
+		"name": "Freeplay Cutscenes",
 		"type": "bool",
-		"description": "Decide if dialogues should play on freeplay too or not",
+		"description": "Decide if dialogues/Cutscenes should play on freeplay too or not",
 		"value": false
 	}
 ]
