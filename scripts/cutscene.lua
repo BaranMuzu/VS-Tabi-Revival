@@ -1,8 +1,24 @@
+function getFreeplayDialogueCheck()
+	local versionsSupportSettings = {'0.7.2', '0.7.3', '1.0'};
+	local isSupported = false;
+	for i=1,#versionsSupportSettings do
+		if stringStartsWith(version, versionsSupportSettings[i]) then
+			isSupported = true;
+		end
+	end
+
+	if isSupported then
+		return getModSetting("freeplaydialogues");
+	else
+		return false;
+	end
+end
+
 local startShit = false
 local canDoShit = true
 local canExit = true
 local canPressShit = true
-local whatevermodfreeplay = getModSetting("freeplaydialogues")
+local whatevermodfreeplay = getFreeplayDialogueCheck()
 
 local textindex = 1
 local currentText = ""
