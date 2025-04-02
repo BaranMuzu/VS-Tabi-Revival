@@ -11,6 +11,7 @@
             "boxPos": "left"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "hurt",
             "char": "GF",
@@ -18,6 +19,7 @@
             "audio": "genocide/2"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "hurt",
             "char": "GF",
@@ -25,6 +27,7 @@
             "audio": "genocide/3"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "hurt-cry",
             "char": "GF",
@@ -32,6 +35,7 @@
             "audio": "genocide/4"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "cry",
             "char": "Tabi",
@@ -39,6 +43,7 @@
             "audio": "genocide/5"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "cry-2",
             "char": "Tabi",
@@ -46,6 +51,7 @@
             "audio": "genocide/6"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "hurt-mad",
             "char": "GF",
@@ -53,6 +59,7 @@
             "audio": "genocide/7"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "hurt",
             "char": "GF",
@@ -61,6 +68,7 @@
             "lineVolume": 0.5
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "hurt",
             "char": "Tabi",
@@ -68,6 +76,7 @@
             "audio": "genocide/9"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "cry",
             "char": "Tabi",
@@ -75,6 +84,7 @@
             "audio": "genocide/8"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "cry",
             "char": "Tabi",
@@ -82,6 +92,7 @@
             "audio": "genocide/bbb"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "cry-2",
             "char": "Tabi",
@@ -89,6 +100,7 @@
             "audio": "genocide/10"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "cry",
             "char": "Tabi",
@@ -96,6 +108,7 @@
             "audio": "genocide/11"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "cry",
             "char": "Tabi",
@@ -103,6 +116,7 @@
             "audio": "genocide/12"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "cry-2",
             "char": "Tabi",
@@ -110,6 +124,7 @@
             "audio": "genocide/13"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "cry-2",
             "char": "Tabi",
@@ -117,6 +132,7 @@
             "audio": "genocide/14"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "cry",
             "char": "Tabi",
@@ -124,6 +140,7 @@
             "audio": "genocide/TABIGENOCHOP1"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "cry-2",
             "char": "Tabi",
@@ -131,6 +148,7 @@
             "audio": "genocide/TABIGENOCHOP2"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "black",
             "char": "Tabi",
@@ -138,6 +156,7 @@
             "audio": "genocide/TABIGENOCHOP3"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "black",
             "char": "Tabi",
@@ -145,6 +164,7 @@
             "audio": "genocide/TABIGENOCHOP4"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "scream",
             "char": "Tabi",
@@ -152,6 +172,7 @@
             "audio": "genocide/TABIGENOCHOP5"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "cry-2",
             "char": "Tabi",
@@ -159,6 +180,7 @@
             "audio": "genocide/TABIGENOCHOP6"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "cry-2",
             "char": "Tabi",
@@ -166,6 +188,7 @@
             "audio": "genocide/TABIGENOCHOP7"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "angry-hurt",
             "char": "BF",
@@ -173,6 +196,7 @@
             "boxPos": "left"
         },
         {
+            "music": "pre-genocide",
             "bg": "blur",
             "expression": "scream",
             "char": "Tabi",

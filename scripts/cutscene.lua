@@ -16,6 +16,7 @@ local characterlinePath = "dialogue/characters/"
 local panelPath = "dialogue/panels/"
 local music = ""
 local volume = 1
+local canLoop = true
 
 luaDebugMode = true;
 
@@ -105,6 +106,15 @@ function onCustomSubstateUpdatePost(name, elapsed)
             if canPressShit then
                 lineIndex = lineIndex + 1
                 playSound("dialogue/dialogue fucking clicking sound", 1, "idk")
+                if songName == 'My Battle' then
+                   if lineIndex == 3 then
+                      canLoop = false
+                   elseif lineIndex == 13 then
+                      canLoop = true
+                   elseif lineIndex == 14 then
+                      canLoop = false
+                   end
+                end
                 if lineIndex <= #dialogueLines then
                     stopSound("yea")
                     medialogingsobad(dialogueLines[lineIndex])
@@ -159,9 +169,9 @@ function medialogingsobad(line)
 
     if char == 'transition' then
         canPressShit = false;
+        lineIndex = lineIndex + 1
         cameraFade('camOther', 'black', 1, true);
         runTimer('fadeBackIn');
-        lineIndex = lineIndex + 1
         return;
     end
 
@@ -203,7 +213,7 @@ function medialogingsobad(line)
         playSound('dialogue/'..sound, 1, "yea")
     end
 
-    if music ~= "" and music ~= nil then
+    if music ~= "" and music ~= nil and canLoop then
         playSound(music, volume, 'realMusic')
     end
 
@@ -243,7 +253,7 @@ end
 
 function onSoundFinished(tag)
     if tag == 'realMusic' then
-        playSound(music, volume, 'realMusic')
+        playSound(music, 0.8, 'realMusic')
     end
 end
 

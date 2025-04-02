@@ -15,6 +15,7 @@
             "boxPos": "right"
         },
         {
+            "music": "phone-call",
             "bg": "Phone_talk_1",
             "char": "gf",
             "text": "Haiii babee!",
@@ -22,12 +23,14 @@
             "boxPos": "left"
         },
         {
+            "music": "phone-call",
             "char": "gf",
             "text": "Hey. There's this new fancy restuarant that I wanna go to, and I want YOU to come with me.",
             "boxPos": "left",
             "audio": "my-battle/GF 2"
         },
         {
+            "music": "phone-call",
             "bg": "Phone_talk_2",
             "char": "bf",
             "text": "Uhhh....",
@@ -35,6 +38,7 @@
             "audio": "my-battle/4"
         },
         {
+            "music": "phone-call",
             "bg": "phone_talk_5",
             "char": "gf",
             "text": "Oh yeah! Don't worry about it. My family's rich as hell, remember? It's gonna be on me.",
@@ -42,6 +46,7 @@
             "boxPos": "left"
         },
         {
+            "music": "phone-call",
             "bg": "Phone_talk_7",
             "char": "bf",
             "text": "Ay!",
@@ -49,6 +54,7 @@
             "audio": "my-battle/6"
         },
         {
+            "music": "phone-call",
             "bg": "phone_talk_5",
             "char": "gf",
             "text": "Hehehe! Meet my at my place. I'll take you there.",
@@ -56,9 +62,11 @@
             "boxPos": "left"
         },
         {
+            "music": "phone-call",
             "char": "transition"
         },
         {
+            "music": "phone-call",
             "bg": "gf-looks-back",
             "char": "gf",
             "text": "Aw Shit. Babe, I gotta tinkle. Can you wait here for a bit?",
@@ -66,6 +74,7 @@
             "audio": "my-battle/GF 5"
         },
         {
+            "music": "phone-call",
             "bg": "gf-looks-back",
             "char": "bf",
             "text": "*?*",
@@ -73,6 +82,7 @@
             "audio": "bf5"
         },
         {
+            "music": "phone-call",
             "bg": "gf-looks-back",
             "char": "GF",
             "text": "AWWWW!!! You're gonna take me there? You're so sweet.",
@@ -90,6 +100,7 @@
             "audio": "bf1"
         },
         {
+            "music": "tabi-theme",
             "bg": "blur",
             "char": "gf",
             "expression": "huh",
@@ -98,6 +109,7 @@
             "audio": "my-battle/GF 7"
         },
         {
+            "music": "tabi-theme",
             "bg": "blur",
             "char": "bf",
             "expression": "idle",
@@ -106,6 +118,7 @@
             "audio": "bf2"
         },
         {
+            "music": "tabi-theme",
             "bg": "blur",
             "char": "Tabi",
             "expression": "black",
@@ -114,6 +127,7 @@
             "audio": "my-battle/14"
         },
         {
+            "music": "tabi-theme",
             "bg": "blur",
             "char": "gf",
             "expression": "huh",
@@ -122,6 +136,7 @@
             "audio": "my-battle/GF 8"
         },
         {
+            "music": "tabi-theme",
             "bg": "blur",
             "char": "Tabi",
             "expression": "angry-2",
@@ -130,14 +145,16 @@
             "audio": "my-battle/tabichopagain1"
         },
         {
+            "music": "tabi-theme",
             "bg": "blur",
             "char": "Tabi",
             "expression": "angry-2",
-            "text": "..And as your for you...",
+            "text": "..And as for you...",
             "boxPos": "right",
             "audio": "my-battle/tabichopagain2"
         },
         {
+            "music": "tabi-theme",
             "bg": "blur",
             "char": "Tabi",
             "expression": "angry-2",
@@ -146,6 +163,7 @@
             "audio": "my-battle/tabichopagaian3"
         },
         {
+            "music": "tabi-theme",
             "bg": "blur",
             "char": "Tabi",
             "expression": "angry-2",
@@ -154,6 +172,7 @@
             "audio": "my-battle/tabichopagain4"
         },
         {
+            "music": "tabi-theme",
             "bg": "blur",
             "char": "Tabi",
             "expression": "angry-2",
@@ -162,6 +181,7 @@
             "audio": "my-battle/tabichopagain5"
         },
         {
+            "music": "tabi-theme",
             "bg": "blur",
             "char": "Tabi",
             "expression": "angry-2",
@@ -170,6 +190,7 @@
             "audio": "my-battle/tabichopagain6"
         },
         {
+            "music": "tabi-theme",
             "bg": "blur",
             "char": "bf",
             "expression": "grin",
@@ -178,6 +199,7 @@
             "boxPos": "left"
         },
         {
+            "music": "tabi-theme",
             "bg": "blur",
             "char": "Tabi",
             "expression": "mic",
