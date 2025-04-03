@@ -154,6 +154,15 @@ function onUpdatePost(elapsed)
 	end
 end
 
+function onGameOverStart()
+	for i=1,#characterNames do
+		runHaxeCode([[
+			var cam = game.variables.get("cam_]]..characterNames[i]..[[");
+			FlxG.cameras.remove(cam);
+		]]);
+	end
+end
+
 function getCharPos(camCharacter)
 	local charCamPosition = {0, 0};
 	if camCharacter == 'dad' then

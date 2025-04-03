@@ -15,7 +15,7 @@ function getFreeplayDialogueCheck()
 end
 
 function shouldRemoveHealth()
-	if versionUMM ~= nil then
+	if versionUMM ~= nil or UMMversion ~= nil then
 		if localPlay or onlinePlay then
 			return false;
 		end
@@ -35,7 +35,7 @@ function shouldRemoveHealth()
 		end
 	end
 
-	return true;
+	return getHealth() >= 0.1;
 end
 
 local letend = false
@@ -157,7 +157,7 @@ function onUpdatePost(elapsed)
 end
 
 function opponentNoteHit(index, noteData, noteType, isSustainNote)
-	if getHealth() >= 0.1 and shouldRemoveHealth() then
+	if shouldRemoveHealth() then
 		addHealth(-((0.023 * (getHealth() + 0.2)) * (isSustainNote and 0.75 or 1)));
 	end
 end

@@ -89,6 +89,10 @@ function onUpdate(elapsed)
 	setProperty('camFollow.y', realCameraPos[2]);
 end
 
+function onGameOverStart()
+	close();
+end
+
 function lerp(a, b, ratio)
 	return a + ratio * (b - a);
 end
