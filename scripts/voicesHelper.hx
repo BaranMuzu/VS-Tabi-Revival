@@ -1,9 +1,10 @@
-// ADDS THE FUNCTIONALITY OF MULTIPLE VOICE FILES TO UMM!!
-// pleas credit me if u use this for ur own mod :D
+// ADDS THE FUNCTIONALITY OF MULTIPLE VOICE FILES TO PRE-0.7.3!!!
 
 import backend.Paths;
 import flixel.sound.FlxSound;
 import states.MainMenuState;
+import StringTools;
+import Main;
 
 var vocalsOpponent:FlxSound;
 var dontDoAnything:Bool = false;
@@ -16,12 +17,20 @@ function onCreate()
 	if(sound != null && sound.length > 0)
 		dontDoAnything = true;
 
-	if(MainMenuState.UMMVersion == null)
+	var versionsSupportSplitVocals:Array<String> = ['0.7.3', '1.0'];
+	for(version in versionsSupportSplitVocals)
+	{
+		if(StringTools.startsWith(MainMenuState.psychEngineVersion, version))
+			dontDoAnything = true;
+	}
+
+	// psych online is special :)
+	if(Main.PSYCH_ONLINE_VERSION != null)
 		dontDoAnything = true;
 
 	if(dontDoAnything)
 	{
-		trace("UMM Voices Helper is disabled!");
+		trace("Voices Helper is disabled!");
 	}
 }
 
@@ -78,7 +87,15 @@ function onUpdatePost()
 			}
 		}
 
-		vocalsOpponent.time = game.vocals.time;
+		if(game.vocals.pitch != vocalsOpponent.pitch)
+		{
+			vocalsOpponent.pitch = game.vocals.pitch;
+		}
+
+		if(game.vocals.time != vocalsOpponent.time)
+		{
+			vocalsOpponent.time = game.vocals.time;
+		}
 	}
 }
 
