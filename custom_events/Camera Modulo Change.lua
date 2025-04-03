@@ -7,9 +7,11 @@ function onEvent(name, value1, value2)
         stength = tonumber(value2)
 
         if interval == 0 or interval == 1 then
-            triggerEvent("Set GF Speed", 1, nil)
+            triggerEvent("Set GF Speed", "1", "")
         elseif interval == 2 or interval == 4 or interval == 8 then
-            triggerEvent("Set GF Speed", 2, nil)
+            triggerEvent("Set GF Speed", "2", "")
+        else
+            triggerEvent("Set GF Speed", "1", "")
         end
     end
 end
