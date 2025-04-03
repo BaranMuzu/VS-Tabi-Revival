@@ -24,7 +24,7 @@ function onBeatHit()
 end
 
 function onSectionHit()
-    if interval ~= 0 and getProperty('camZooming') then
+    if interval ~= 0 and getProperty('camZooming') and getPropertyFromClass('Main', 'PSYCH_ONLINE_VERSION') == nil then
         -- it adds a bump every new section
         triggerEvent('Add Camera Zoom', -(0.015 * getProperty('camZoomingMult')), -(0.03 * getProperty('camZoomingMult')));
     end
