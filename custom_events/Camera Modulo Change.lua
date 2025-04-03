@@ -5,6 +5,12 @@ function onEvent(name, value1, value2)
     if name == 'Camera Modulo Change' then
         interval = tonumber(value1)
         stength = tonumber(value2)
+
+        if interval == 0 or interval == 1 then
+            triggerEvent("Set GF Speed", 1, nil)
+        elseif interval == 2 or interval == 4 or interval == 8 then
+            triggerEvent("Set GF Speed", 2, nil)
+        end
     end
 end
 

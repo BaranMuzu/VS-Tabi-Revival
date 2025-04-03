@@ -271,6 +271,11 @@
 						"Camera Modulo Change",
 						"2",
 						"1"
+					],
+					[
+						"HScript Call",
+						"locktoggle",
+						""
 					]
 				]
 			],
