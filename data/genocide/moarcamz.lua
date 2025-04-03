@@ -46,13 +46,13 @@ function onCreatePost()
 
 	makeLuaSprite('bTop');
 	makeGraphic('bTop', screenWidth, screenHeight * 0.5, '000000');
-	setObjectCamera('bTop', 'camOther');
+	setObjectCamera('bTop', shouldHideNotes() and 'camOther' or 'camHUD');
 	setProperty('bTop.alpha', 0);
 	addLuaSprite('bTop');
 
 	makeLuaSprite('bBot', nil, 0, screenHeight * 0.5);
 	makeGraphic('bBot', screenWidth, screenHeight * 0.5, '000000');
-	setObjectCamera('bBot', 'camOther');
+	setObjectCamera('bBot', shouldHideNotes() and 'camOther' or 'camHUD');
 	setProperty('bBot.alpha', 0);
 	addLuaSprite('bBot');
 end
@@ -210,4 +210,28 @@ end
 
 function lerp(a, b, ratio)
 	return a + ratio * (b - a);
+end
+
+function shouldHideNotes()
+	if versionUMM ~= nil or UMMversion ~= nil then
+		if localPlay or onlinePlay then
+			return false;
+		end
+
+		if leftSide then
+			return false;
+		end
+	end
+
+	if getPropertyFromClass('Main', 'PSYCH_ONLINE_VERSION') ~= nil then
+		if isRoomConnected() then
+			return false;
+		end
+
+		if not playsAsBF() then
+			return false;
+		end
+	end
+
+	return true;
 end
