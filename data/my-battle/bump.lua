@@ -2,7 +2,7 @@ local bumpThing = false;
 luaDebugMode = true;
 
 function onCreate()
-	triggerEvent("Set GF Speed", 2, nil)
+	triggerEvent("Set GF Speed", "2", "")
 
 	if shadersEnabled then
 	initLuaShader('perspective');
